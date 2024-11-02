@@ -3,18 +3,22 @@
     <table class="table">
       <thead>
         <tr>
-          <th class="h4">Course's Name</th>
-          <th class="h4">Professor's Name</th>
-          <th class="h4">Credits</th>
+          <th class="h4">#</th>
+          <th class="h4">Nombre común</th>
+          <th class="h4">Tipo</th>
+          <th class="h4">Clima</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let p of plantas">
           <td>
+            <dd>{{p.id}}</dd>
+          </td>
+          <td>
             <dd>{{p.nombre_comun}}</dd>
           </td>
           <td>
-            <dd>{{p.nombre_cientifico}}</dd>
+            <dd>{{p.tipo}}</dd>
           </td>
           <td>
             <dd>{{p.clima}}</dd>
@@ -22,5 +26,7 @@
       </tr>
       </tbody>
     </table>
+    <p>Total de plantas de interior: {{ totalInterior }}</p>
+    <p>Total de plantas de exterior: {{ totalExterior }}</p>
   </div>
 </div>
