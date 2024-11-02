@@ -59,7 +59,7 @@ describe('PlantasListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should create a table with three rows plus header', () => {
+  it('should create a table with three rows', () => {
     const rows = debug.queryAll(By.css('tr'));
     expect(rows.length).toBe(3);
   });
