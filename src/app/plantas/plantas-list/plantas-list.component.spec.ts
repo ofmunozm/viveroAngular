@@ -36,7 +36,7 @@ describe('PlantasListComponent', () => {
 
     component.plantas = [];
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 3; i++) {
       const planta = new Planta(
         faker.number.int(),
         faker.person.firstName(),
@@ -59,8 +59,12 @@ describe('PlantasListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should create a table with three rows', () => {
-    const rows = debug.queryAll(By.css('tr'));
-    expect(rows.length).toBe(3);
+  it('should create a table with a header row and three data rows', () => {
+    const headerRow = debug.query(By.css('thead tr'));
+    expect(headerRow).toBeTruthy();
+
+    const dataRows = debug.queryAll(By.css('tbody tr'));
+    expect(dataRows.length).toBe(3);
+
   });
 });
