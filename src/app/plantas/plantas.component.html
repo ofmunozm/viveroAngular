@@ -1,3 +1,26 @@
-<p>
-  plantas works!
-</p>
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Course's Name</th>
+          <th class="h4">Professor's Name</th>
+          <th class="h4">Credits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of plantas">
+          <td>
+            <dd>{{p.nombre_comun}}</dd>
+          </td>
+          <td>
+            <dd>{{p.nombre_cientifico}}</dd>
+          </td>
+          <td>
+            <dd>{{p.clima}}</dd>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
